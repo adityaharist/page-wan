@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Hidroponik Tempel</title>
+  <link rel="stylesheet" href="f7/css/framework7.bundle.css">
+  <link rel="stylesheet" href="f7/css/framework7.keypad.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+</head>
+<body>
+
+  <div id="app">
+  	<div class="statusbar"></div> <!-- ? -->
+  	<div class="view view-main view-init ios-edges" data-url="/"> <!-- view yang ditampilkan pada layar utama -->
+
+  	  <div class="page"> <!-- halaman utama berisi navbar dan halaman konten-->
+  	  	
+  	  	<div class="navbar">
+  	  	  <div class="navbar-inner"> <!-- berisi 3 komponen: kiri,tengah,kanan -->
+  	  	  	<div class="left">
+  	  	  	  <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+  	  	  	</div>
+  	  	  	<div class="title sliding">HidroponikU</div>
+  	  	  	<div class="right">
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons ios-only">search</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+            </div>
+            <div class="title-large">
+              <div class="title-large-text">HidroponikU</div>
+            </div>
+            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+              <div class="searchbar-inner">
+                <div class="searchbar-input-wrap">
+                  <input type="search" placeholder="Cari Daftar Menu"/>
+                  <i class="searchbar-icon"></i>
+                  <span class="input-clear-button"></span>
+                </div>
+                <span class="searchbar-disable-button">Cancel</span>
+              </div>
+            </form>
+  	  	  </div> <!-- end of navbar-inner -->
+  	  	</div> <!-- end of navbar -->
+
+  	  	<div class="page-content">
+  	  	  <div class="list searchbar-hide-on-search">
+            <ul>
+              <li>
+                <a class="item-content item-link" href="/tentang/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Mengenai Aplikasi Hidroponik</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="block-title searchbar-found">Wawasan Umum</div>
+          <div class="list components-list searchbar-found">
+          	<ul>
+          	  <li>
+          	  	<a class="item-content item-link" href="/list-tanaman/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Daftar Tanaman</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	  <li>
+          	  	<a class="item-content item-link" href="/list-media-tanam/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Media Tanam</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	  <li>
+          	  	<a class="item-content item-link" href="/tabel_periodik/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Tabel Periodik Masa Tanam</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	</ul>
+          </div>
+
+          <div class="block-title searchbar-found">Manajemen HidroponikU</div>
+          <div class="list components-list searchbar-found">
+          	<ul>
+          	  <li>
+          	  	<a class="item-content item-link" href="/input_tanamanku/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Input Tanamanku</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	  <li>
+          	  	<a class="item-content item-link" href="/input_pengeluaran/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Input Biaya</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	  <li>
+          	  	<a class="item-content item-link" href="/input_jadwalku/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Input Jadwal</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	</ul>
+          </div>
+
+          <div class="block-title searchbar-found">Laporan HidroponikU</div>
+          <div class="list components-list searchbar-found">
+          	<ul>
+          	  <li>
+          	  	<a class="item-content item-link" href="/pengeluaran/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Biaya</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	  <li>
+          	  	<a class="item-content item-link" href="/jadwalku/">
+          	  	  <div class="item-inner">
+          	  	  	<div class="item-title">Jadwal</div>
+          	  	  </div>
+          	  	</a>
+          	  </li>
+          	</ul>
+          </div>
+
+  	  	  <div class="list simple-list searchbar-not-found">
+            <ul><li>Hasil pencarian kosong</li></ul>
+          </div>
+  	  	</div>
+
+  	  </div> <!-- end of page -->
+
+  	</div> <!-- end of view-main -->
+  </div> <!-- end of id #app -->
+
+  <script src="f7/js/framework7.bundle.js"></script>
+  <script src="f7/js/framework7.keypad.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<div class="page" data-name="input_pengeluaran">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Form Biaya Pembelian</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <form class="list form-store-data" id="demo-form">
+      <ul>
+        <li class="item-content item-input">
+          <div class="item-inner">
+            <div class="item-title item-label">Nama Barang</div>
+            <div class="item-input-wrap">
+              <input name="nama" type="text" placeholder="Masukkan nama">
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+        </li>
+        <li class="item-content item-input">
+          <div class="item-inner">
+            <div class="item-title item-label">Jumlah Barang</div>
+            <div class="item-input-wrap">
+              <input name="jumlah" type="numpad" placeholder="Masukkan angka">
+              <!-- <span class="input-clear-button"></span> -->
+            </div>
+          </div>
+        </li>
+        <li class="item-content item-input">
+          <div class="item-inner">
+            <div class="item-title item-label">Harga Total</div>
+            <div class="item-input-wrap">
+              <input name="harga" type="calculator" placeholder="Masukkan jumlah harga">
+              <!-- <span class="input-clear-button"></span> -->
+            </div>
+          </div>
+        </li>
+        <li class="item-content item-input">
+          <div class="item-inner">
+            <div class="item-title item-label">Waktu Pembelian</div>
+            <div class="item-input-wrap">
+              <input name="waktu" type="datetime-local" placeholder="Silahkan dipilih dipilih...">
+            </div>
+          </div>
+        </li>
+        <li class="item-content item-input">
+          <div class="item-inner">
+            <div class="item-title item-label">Tempat Beli Barang</div>
+            <div class="item-input-wrap">
+              <textarea name="tempat" class="resizable" placeholder="Masukkan tempat atau alamat pembelian"></textarea>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </form>
+    <div class="block">
+      <div class="row">
+        <!-- <a href="/" class="col button button-fill">Batal</a>
+        <a class="col button button-fill" id="ok">Simpan</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  Framework7.use(Framework7Keypad);
+
+  var app = new Framework7();
+
+  //on page in it if page load via ajax 
+  $$(document).on('pageInit', function() {
+
+    /*========query form=======*/
+
+    $$(document).on('pageInit', function() {
+    var queryForm = null;
+    $$('#ok').on('click', function () {
+     queryForm = app.formToJSON('#demo-form');
+       console.log(JSON.stringify(queryForm));
+    });
+});
+
+});
+
+  var numpad = app.keypad.create({
+    inputEl: '#demo-numpad'
+  });
+
+  var numpadLimited = app.keypad.create({
+    inputEl: '#demo-numpad-limited',
+    valueMaxLength: 2,
+    dotButton: false
+  });
+
+  var calculator = app.keypad.create({
+    inputEl: '#demo-calculator',
+    type: 'calculator',
+    toolbar: false
+  });
+</script>
